@@ -1,0 +1,45 @@
+import com.geetgobindsingh.core_datasource.adapters.ImageModel;
+import com.geetgobindsingh.core_datasource.adapters.MeasurementModel;
+
+CREATE TABLE DogEntity(
+    id INTEGER NOT NULL PRIMARY KEY,
+    name TEXT NOT NULL,
+    weight TEXT AS MeasurementModel,
+    height TEXT AS MeasurementModel,
+    bredFor TEXT NOT NULL,
+    breedGroup TEXT NOT NULL,
+    lifeSpan TEXT NOT NULL,
+    temperament TEXT NOT NULL,
+    origin TEXT NOT NULL,
+    referenceImageId TEXT,
+    image TEXT AS ImageModel
+);
+
+fetchAllDogs:
+SELECT *
+FROM DogEntity
+LIMIT :limit OFFSET :offset;
+
+insertOrReplaceDog:
+INSERT OR REPLACE
+INTO DogEntity (id, name, weight, height, bredFor, breedGroup, lifeSpan, temperament, origin, referenceImageId,image)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+
+countDogs:
+SELECT count(*) FROM DogEntity;
+
+getDogs:
+SELECT *
+FROM DogEntity
+LIMIT :limit OFFSET :offset;
+
+getDog:
+SELECT * FROM DogEntity
+WHERE id = :id;
+
+removeDog:
+DELETE FROM DogEntity
+WHERE id = :id;
+
+removeAllDogs:
+DELETE FROM DogEntity;
