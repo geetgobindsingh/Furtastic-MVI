@@ -14,7 +14,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Furtastic"
+rootProject.name = "Furtastic-MVI"
 include(":app")
 include(":core")
 include(":core_ui")

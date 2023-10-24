@@ -1,1 +1,1 @@
-/Users/geetgobindsingh/AndroidStudioProjects/Github/Furtastic/buildSrc/build/classes/kotlin/main/Configuration.class
+/Users/geetgobindsingh/AndroidStudioProjects/Github/Furtastic-MVI/buildSrc/build/classes/kotlin/main/Configuration.class
