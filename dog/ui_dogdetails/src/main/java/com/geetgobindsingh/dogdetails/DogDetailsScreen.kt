@@ -46,7 +46,6 @@ fun DogDetailsScreen(
                     effect.message, duration = SnackbarDuration.Short
                 )
             }
-
             else -> {}
         }
     }
